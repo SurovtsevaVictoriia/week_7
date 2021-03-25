@@ -6,30 +6,6 @@
 #include <functional>
 #include <future>
 
-//template < class InputIt, class UnaryFunction >
-//UnaryFunction parallel_for_each(InputIt first, InputIt last, UnaryFunction f)
-//{
-//		const std::size_t length = std::distance(first, last);
-//
-//	
-//		InputIt middle = first;
-//
-//		std::advance(middle, length / 2);
-//
-//		std::future < UnaryFunction > first_half_result =
-//			std::async(parallel_for_each <InputIt, UnaryFunction>, first, middle, f);
-//
-//		//UnaryFunction second_half_result = parallel_for_each(middle, last, f);
-//
-//		std::future < UnaryFunction > second_half_result =
-//			std::async(parallel_for_each <InputIt, UnaryFunction>, middle, last, f);
-//
-//		return first_half_result.get();
-//}
-
-
-
-
 template < typename Iterator, typename T >
 T parallel_for_each(Iterator first, Iterator last, T f)
 {
